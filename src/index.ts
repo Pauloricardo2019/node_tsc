@@ -1,4 +1,11 @@
+import express from 'express'
 
-const a: string = "1"
+const server = express()
 
-console.log(a)
+server.get('/', (req, res) => {
+  res.send("Hello world!")
+})
+
+server.listen(3000, () => {
+  console.log("Server started on port 3000")
+})
